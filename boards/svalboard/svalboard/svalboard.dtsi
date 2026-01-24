@@ -122,9 +122,9 @@ zephyr_udc0: &usbd {
     };
 };
 */
-&default_layout {
-    transform = <&default_transform>;
-};
+// &default_layout {
+//     transform = <&default_transform>;
+// };
 
 &timer {
     status = "okay";
