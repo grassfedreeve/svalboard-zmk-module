@@ -1,0 +1,11 @@
+#
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+#
+
+config BOARD_SVALBOARD_LEFT
+    select SOC_RP2040 
+    select RP2_FLASH_W25Q080
+
+
+

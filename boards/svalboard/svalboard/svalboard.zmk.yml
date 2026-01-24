@@ -1,0 +1,16 @@
+file_format: "1"
+id: svalboard
+name: Svalboard ZMK
+url: https://svalboard.com/
+type: board
+arch: arm
+features:
+  - keys
+  - underglow
+#  - studio
+outputs:
+  - usb
+siblings:
+  - svalboard_left
+  - svalboard_right
+

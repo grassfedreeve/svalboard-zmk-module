@@ -1,0 +1,10 @@
+boards:
+ - name: svalboard_left
+   vendor: svalboard
+   socs:
+     - name: rp2040
+ - name: svalboard_right
+   vendor: svalboard
+   socs:
+     - name: rp2040
+

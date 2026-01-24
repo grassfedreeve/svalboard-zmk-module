@@ -1,11 +1,39 @@
-# ZMK Module Template
+# Svalboard ZMK Module
 
-This repository contains a template for a ZMK module, as it would most frequently be used. 
+This is the ZMK module for the Svalboard
 
 ## Usage
 
-Read through the [ZMK Module Creation](https://zmk.dev/docs/development/module-creation) page for details on how to configure this template.
+Add these lines to `config/west.yml` in your `zmk-config` repository:
 
-## More Info
+```yaml
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: grassfedreeve                         # <---
+      url-base: https://github.com/grassfedreeve  # <---
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    - name: svalboard-zmk-module
+      remote: grassfedreeve
+      revision: main
+  self:
+    path: config
+```
 
-For more info on modules, you can read through  through the [Zephyr modules page](https://docs.zephyrproject.org/3.5.0/develop/modules.html) and [ZMK's page on using modules](https://zmk.dev/docs/features/modules). [Zephyr's west manifest page](https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#west-manifests) may also be of use.
+Then add the `svalboard` board to your `build.yaml`:
+
+```yaml
+---
+include:
+  - board: svalboard_rev1_left
+  - board: svalboard_rev1_right
+
+```
+
+For more information on ZMK Modules and building locally, see [the ZMK docs page on modules.](https://zmk.dev/docs/features/modules)
+

@@ -1,0 +1,58 @@
+#
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+#
+
+if BOARD_SVALBOARD_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Svalboard ZMK"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif # BOARD_SVALBOARD_LEFT
+
+if BOARD_SVALBOARD_LEFT || BOARD_SVALBOARD_RIGHT
+
+config ZMK_KSCAN_MATRIX_WAIT_BEFORE_INPUTS
+    default 90
+
+config ZMK_KSCAN_MATRIX_WAIT_BETWEEN_OUTPUTS
+    default 90
+    
+config BOARD
+    default "svalboard"
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_WIRED
+	default y
+
+config ZMK_SPLIT_WIRED_CMD_BUFFER_ITEMS
+	default 30
+
+config ZMK_SPLIT_WIRED_EVENT_BUFFER_ITEMS
+	default 30
+
+config SERIAL
+    default y
+
+config ZMK_KSCAN_MATRIX_POLLING
+    default y
+
+config ZMK_KSCAN_DEBOUNCE_PRESS_MS
+    default 0
+
+config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
+    default 0
+
+#if ZMK_RGB_UNDERGLOW
+
+#config WS2812_STRIP
+#    default y
+
+#endif # ZMK_RGB_UNDERGLOW
+
+endif # BOARD_SVALBOARD_LEFT || BOARD_SVALBOARD_RIGHT
