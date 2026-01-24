@@ -4,9 +4,8 @@
     default_layout: default_layout {
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
-        transform = <&default_transform>;
         kscan = <&kscan0>;
-
+        transform = <&default_transform>;
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100  350    0       0     0     0>
@@ -62,5 +61,16 @@
             , <&key_physical_attrs 100 100 1450  700       0     0     0>
             , <&key_physical_attrs 200 100 1560  700       0     0     0>
             ;
+    };
+
+    position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        complete;
+
+        default_layout {
+            physical-layout = <&default_layout>;
+            positions = <>;
+        };
     };
 };
