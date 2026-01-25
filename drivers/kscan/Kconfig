@@ -1,0 +1,18 @@
+# In svalboard-zmk-module/Kconfig
+
+if KSCAN
+
+config SVAL_KSCAN
+    bool "Svalboard KScan Driver"
+    depends on DT_HAS_ZMK_KSCAN_SVAL_MATRIX_ENABLED
+    default y
+
+if SVAL_KSCAN
+
+config ZMK_KSCAN_SVAL_MATRIX
+    bool "Svalboard Matrix Scanning"
+    default y
+
+endif # SVAL_KSCAN
+
+endif # KSCAN
