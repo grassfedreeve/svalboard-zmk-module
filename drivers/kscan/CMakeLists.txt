@@ -3,4 +3,4 @@
 
 zephyr_library_amend()
 
-zephyr_library_sources_ifdef(CONFIG_ZMK_KSCAN_SVAL_MATRIX zmk_kscan_sval_matrix.c)
+zephyr_library_sources_ifdef(CONFIG_SVAL_KSCAN zmk_kscan_sval_matrix.c)
