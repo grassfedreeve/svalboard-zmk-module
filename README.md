@@ -30,8 +30,8 @@ Then add the `svalboard` board to your `build.yaml`:
 ```yaml
 ---
 include:
-  - board: svalboard_rev1_left
-  - board: svalboard_rev1_right
+  - board: svalboard_left
+  - board: svalboard_right
 
 ```
 
