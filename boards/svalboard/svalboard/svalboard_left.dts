@@ -57,12 +57,12 @@
     
     spi0_default: spi0_default {
         group1 {
-            pinmux = <SPI0_CSN_P25>,   // GP25 (CS)
-                     <SPI0_SCK_P26>,   // GP26 (SCK)
-                     <SPI0_TX_P27>;    // GP27 (MOSI)
+            pinmux = <SPI0_CSN_P25>,
+                     <SPI0_SCK_P26>,
+                     <SPI0_TX_P27>;
         };
         group2 {
-            pinmux = <SPI0_RX_P24>;    // GP24 (MISO)
+            pinmux = <SPI0_RX_P24>;
             input-enable;
         };
     };
