@@ -57,7 +57,7 @@
     
     spi0_default: spi0_default {
         group1 {
-            pinmux = <SPI0_CSN_P25>, <SPI0_SCK_P26>, <SPI0_TX_P27>;
+            pinmux = <SPI0_SCK_P26>, <SPI0_TX_P27>;
         };
         group2 {
             pinmux = <SPI0_RX_P24>;
