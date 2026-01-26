@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2026 The ZMK Contributors
+ * Copyright (c) 2024 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
@@ -22,7 +22,6 @@
 &trackball_listener_right {
     status = "okay";
     input-processors = <&zip_temp_layer 3 2000>;
-    };
 };
 
 / {
