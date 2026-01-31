@@ -57,11 +57,33 @@
             pinmux = <PIO0_P1>;
         };
     };
-/*    
-    pio1_ws2812_default: pio1_ws2812_default {
-        ws2812 {
-            pinmux = <PIO1_P19>;
+    
+    spi1_default: spi1_default {
+        group1 {
+            pinmux = <SPI1_CSN_P25>, <SPI1_SCK_P26>, <SPI1_TX_P27>;
+        };
+        group2 {
+            pinmux = <SPI1_RX_P24>;
+            input-enable;
         };
     };
-*/
+};
+
+&spi1 {
+    status = "okay";
+    pinctrl-0 = <&spi1_default>;
+    pinctrl-names = "default";
+    cs-gpios = <&gpio0 25 GPIO_ACTIVE_LOW>;
+    
+    trackball_right: trackball@0 {
+        compatible = "pixart,pmw3360";
+        status = "okay";
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+        cpi = <1600>;
+    };
+};
+
+&trackball_split_right {
+    device = <&trackball_right>;
 };
