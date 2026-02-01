@@ -13,8 +13,6 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: grassfedreeve                         # <---
       url-base: https://github.com/grassfedreeve  # <---
-    - name: george-norton			  # <---
-      url-base: https://github.com/george-norton  # <---
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -22,9 +20,9 @@ manifest:
       import: app/west.yml
     - name: svalboard-zmk-module
       remote: grassfedreeve
-      revision: trackballs
-    - name: zmk-driver-pmw3360
-      remote: george-norton
+      revision: 3389
+    - name: zmk-driver-pmw3389
+      remote: grassfedreeve
       revision: main
   self:
     path: config

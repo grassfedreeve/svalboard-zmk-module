@@ -80,7 +80,7 @@
     cs-gpios = <&gpio0 25 GPIO_ACTIVE_LOW>;
     
     trackball_left: trackball@0 {
-        compatible = "pixart,pmw3360";
+        compatible = "pixart,pmw3389";
         status = "okay";
         reg = <0>;
         spi-max-frequency = <2000000>;
