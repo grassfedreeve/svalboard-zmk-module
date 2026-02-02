@@ -20,7 +20,7 @@ manifest:
       import: app/west.yml
     - name: svalboard-zmk-module
       remote: grassfedreeve
-      revision: 3389
+      revision: main
     - name: zmk-driver-pmw3389
       remote: grassfedreeve
       revision: main
