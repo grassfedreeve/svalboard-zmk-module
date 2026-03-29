@@ -1,5 +1,5 @@
 file_format: "1"
-id: svalboard
+id: svalboard//zmk
 name: Svalboard ZMK
 url: https://svalboard.com/
 type: board
@@ -13,4 +13,4 @@ outputs:
 siblings:
   - svalboard_left
   - svalboard_right
-
+url: https://svalboard.com/
